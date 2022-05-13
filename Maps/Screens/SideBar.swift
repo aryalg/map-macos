@@ -15,7 +15,10 @@ struct SideBar: View {
     
     var body: some View {
         VStack {
-            SearchResultList(places: appState.places)
+            SearchResultList(places: appState.places) { place in
+                appState.selectedPlace = place
+                print(place)
+            }
         }
         .searchable(text: $search, placement: .sidebar, prompt: "Search Maps")
         .onChange(of: search, perform: {value in
@@ -25,6 +28,7 @@ struct SideBar: View {
         })
         .padding()
     }
+    
 }
 
 struct SideBar_Previews: PreviewProvider {

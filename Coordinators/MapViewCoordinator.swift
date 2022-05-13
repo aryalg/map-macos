@@ -26,8 +26,44 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
         }
         
         view.canShowCallout = true
-        view.detailCalloutAccessoryView = PlaceCalloutView(annotation: annotation)
+        view.detailCalloutAccessoryView = PlaceCalloutView(annotation: annotation, selectedShowDirection: { [weak self] place in
+            
+            let start = MKMapItem.forCurrentLocation()
+            let destination = MKMapItem(placemark: MKPlacemark(coordinate: place.coordinate))
+            
+            self?.calculateRoute(start: start, destination: destination)
+            
+        })
         
         
+    }
+    
+    func calculateRoute(start: MKMapItem, destination: MKMapItem) {
+        
+        let directionRequest = MKDirections.Request()
+        directionRequest.transportType = .automobile
+        directionRequest.source = start
+        directionRequest.destination = destination
+        
+        
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate { response, error in
+            if let error = error {
+                print("Unable to calculate directions \(error)")
+            }
+            
+            
+            guard let response = response,
+                let route = response.routes.first else {
+                    return
+                }
+            
+            for step in route.steps {
+           
+            }
+                
+                
+            
+        }
     }
 }

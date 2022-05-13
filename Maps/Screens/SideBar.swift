@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SideBar: View {
+    
+    private var vm = SearchResultViewModel()
     @State private var search: String = ""
     
     var body: some View {
@@ -16,7 +18,9 @@ struct SideBar: View {
         }
         .searchable(text: $search, placement: .sidebar, prompt: "Search Maps")
         .onChange(of: search, perform: {value in
-            print(value)
+            vm.search(text: value) {
+                
+            }
         })
         .padding()
     }

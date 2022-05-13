@@ -19,4 +19,15 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
         
         mapView.setRegion(region, animated: true)
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotation = view.annotation as? PlaceAnnotation else {
+        return
+        }
+        
+        view.canShowCallout = true
+        view.detailCalloutAccessoryView = PlaceCalloutView(annotation: annotation)
+        
+        
+    }
 }

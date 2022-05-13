@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct SideBar: View {
+    @State private var search: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            SearchResultList()
+        }
+        .searchable(text: $search, placement: .sidebar, prompt: "Search Maps")
+        .onChange(of: search, perform: {value in
+            print(value)
+        })
+        .padding()
     }
 }
 

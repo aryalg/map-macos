@@ -19,6 +19,7 @@
 		04574BD3282E93AC00B53965 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574BD2282E93AC00B53965 /* MapView.swift */; };
 		04574BD7282E957D00B53965 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574BD6282E957D00B53965 /* MapViewCoordinator.swift */; };
 		04574BDA282E96EF00B53965 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574BD9282E96EF00B53965 /* LocationManager.swift */; };
+		04574BDC282ED32B00B53965 /* SearchResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574BDB282ED32B00B53965 /* SearchResultList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		04574BD2282E93AC00B53965 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		04574BD6282E957D00B53965 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
 		04574BD9282E96EF00B53965 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		04574BDB282ED32B00B53965 /* SearchResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				04574BD2282E93AC00B53965 /* MapView.swift */,
+				04574BDB282ED32B00B53965 /* SearchResultList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				04574BD0282E929F00B53965 /* MapScreen.swift in Sources */,
 				04574BA0282E8F6F00B53965 /* MapsApp.swift in Sources */,
+				04574BDC282ED32B00B53965 /* SearchResultList.swift in Sources */,
 				04574BD3282E93AC00B53965 /* MapView.swift in Sources */,
 				04574BDA282E96EF00B53965 /* LocationManager.swift in Sources */,
 				04574BCE282E928F00B53965 /* SideBar.swift in Sources */,

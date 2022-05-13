@@ -11,8 +11,11 @@ import SwiftUI
 struct MapsApp: App {
     var body: some Scene {
         WindowGroup {
+            
+            let appState = AppState()
             HomeScreen()
                 .frame(minWidth: 1280, minHeight: 720)
+                .environmentObject(appState)
         }
     }
 }

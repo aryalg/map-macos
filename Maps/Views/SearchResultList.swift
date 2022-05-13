@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct SearchResultList: View {
+    
+    let places: [PlaceAnnotation]
+    
+    
+    
+    
+    
+    
     var body: some View {
-        List(1...20, id: \.self) {index in
-            Text("Search Result \(index)")
+        List(places) {
+            place in
+            Text(place.title ?? "")
         }
     }
 }
 
 struct SearchResultList_Previews: PreviewProvider {
     static var previews: some View {
-        SearchResultList()
+        SearchResultList(places: [])
     }
 }

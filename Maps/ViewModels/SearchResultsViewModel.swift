@@ -15,7 +15,7 @@ class SearchResultViewModel {
     
     
     
-    func search(text: String, completion: @escaping () -> Void) {
+    func search(text: String, completion: @escaping ([PlaceAnnotation]) -> Void) {
         
         if text.count < 4 {
             return
@@ -33,7 +33,8 @@ class SearchResultViewModel {
                 return
             }
             
-            print("MapsV1: \(response.mapItems)" )
+            let places = response.mapItems.map(PlaceAnnotation.init)
+            completion(places)
         }
         
     }

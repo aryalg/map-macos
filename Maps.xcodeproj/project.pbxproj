@@ -24,6 +24,8 @@
 		04574BE2282ED97C00B53965 /* PlaceAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574BE1282ED97C00B53965 /* PlaceAnnotations.swift */; };
 		04574BE5282EDBDF00B53965 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574BE4282EDBDF00B53965 /* AppState.swift */; };
 		04574BE8282EEB0000B53965 /* PlaceCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574BE7282EEB0000B53965 /* PlaceCalloutView.swift */; };
+		04574BEA282F619500B53965 /* RoutePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574BE9282F619500B53965 /* RoutePopover.swift */; };
+		04574BED282F621300B53965 /* RouteContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574BEC282F621300B53965 /* RouteContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		04574BE1282ED97C00B53965 /* PlaceAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotations.swift; sourceTree = "<group>"; };
 		04574BE4282EDBDF00B53965 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		04574BE7282EEB0000B53965 /* PlaceCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCalloutView.swift; sourceTree = "<group>"; };
+		04574BE9282F619500B53965 /* RoutePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePopover.swift; sourceTree = "<group>"; };
+		04574BEC282F621300B53965 /* RouteContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		04574B9E282E8F6F00B53965 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
+				04574BEB282F620200B53965 /* Controllers */,
 				04574BE3282EDBCE00B53965 /* Global */,
 				04574BE0282ED96C00B53965 /* Annotations */,
 				04574BDD282ED51C00B53965 /* ViewModels */,
@@ -171,6 +176,7 @@
 				04574BE6282EEAEF00B53965 /* Callouts */,
 				04574BD2282E93AC00B53965 /* MapView.swift */,
 				04574BDB282ED32B00B53965 /* SearchResultList.swift */,
+				04574BE9282F619500B53965 /* RoutePopover.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +228,14 @@
 				04574BE7282EEB0000B53965 /* PlaceCalloutView.swift */,
 			);
 			path = Callouts;
+			sourceTree = "<group>";
+		};
+		04574BEB282F620200B53965 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04574BEC282F621300B53965 /* RouteContentViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,8 +378,10 @@
 				04574BCE282E928F00B53965 /* SideBar.swift in Sources */,
 				04574BD7282E957D00B53965 /* MapViewCoordinator.swift in Sources */,
 				04574BE8282EEB0000B53965 /* PlaceCalloutView.swift in Sources */,
+				04574BED282F621300B53965 /* RouteContentViewController.swift in Sources */,
 				04574BDF282ED55800B53965 /* SearchResultsViewModel.swift in Sources */,
 				04574BCC282E921D00B53965 /* HomeScreen.swift in Sources */,
+				04574BEA282F619500B53965 /* RoutePopover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
